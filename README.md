@@ -1,5 +1,7 @@
 # Focus Friendly
 
+![Focus Friendly plugin page](docs/assets/focus-friendly-plugin.png)
+
 Focus Friendly is a local Codex plugin that makes dense information and complex work easier to understand, navigate, and act on.
 
 It is designed for people who experience ADHD, attention barriers, working-memory load, reading difficulty, or information overload. Anyone can use it.
