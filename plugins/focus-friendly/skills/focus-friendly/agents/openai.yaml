@@ -1,0 +1,4 @@
+interface:
+  display_name: "Focus Friendly"
+  short_description: "Make dense information easier to act on"
+  default_prompt: "Use $focus-friendly to make this information easier to understand and act on."

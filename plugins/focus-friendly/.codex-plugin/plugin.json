@@ -1,0 +1,36 @@
+{
+  "name": "focus-friendly",
+  "version": "0.1.0",
+  "description": "Make dense information and complex work easier to understand, navigate, and act on.",
+  "author": {
+    "name": "Focus Friendly contributors"
+  },
+  "license": "MIT",
+  "keywords": [
+    "accessibility",
+    "adhd",
+    "focus",
+    "learning",
+    "productivity",
+    "reading"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Focus Friendly",
+    "shortDescription": "Understand dense information one layer at a time.",
+    "longDescription": "Focus Friendly adapts reading, research, learning, planning, and project work into clear layers with visible context and concrete next steps. It is designed for people who experience attention, working-memory, or reading barriers, while remaining useful to anyone facing information overload.",
+    "developerName": "Focus Friendly contributors",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Research",
+      "Learn",
+      "Plan"
+    ],
+    "defaultPrompt": [
+      "Make this easier to understand one layer at a time.",
+      "Help me learn this concept with one clear example.",
+      "Reorient me and give me the single next step."
+    ]
+  }
+}
