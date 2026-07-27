@@ -20,7 +20,7 @@ Thanks for helping make information easier to use.
 
 ## Validate
 
-Run both commands in `docs/TESTING.md` and review the plugin with at least one realistic prompt.
+Run the validation commands in `docs/TESTING.md` and review the skill with at least one realistic prompt.
 
 ## Commit style
 

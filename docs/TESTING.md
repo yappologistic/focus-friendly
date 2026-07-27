@@ -2,7 +2,7 @@
 
 ## Automated checks
 
-Run from the repository root:
+Run the Codex checks from the repository root:
 
 ```powershell
 $env:PYTHONUTF8 = "1"
@@ -11,6 +11,27 @@ uv run --with pyyaml python C:/Users/LENOVO/.codex/skills/.system/plugin-creator
 ```
 
 The paths above use the local Codex installation on the development machine. Substitute the installed skill paths on another machine.
+
+When Claude Code is installed, validate both the marketplace and the plugin:
+
+```powershell
+claude plugin validate .
+claude plugin validate plugins/focus-friendly
+```
+
+When the Agent Skills reference validator is available, check the portable core directly:
+
+```powershell
+skills-ref validate plugins/focus-friendly/skills/focus-friendly
+```
+
+Confirm that the cross-harness installer discovers exactly one skill:
+
+```powershell
+npx --yes skills add ./plugins/focus-friendly/skills/focus-friendly --list
+```
+
+Validation is complementary: the Agent Skills validator checks the portable core, while the Codex and Claude commands check their respective packaging metadata.
 
 ## Manual behavior cases
 

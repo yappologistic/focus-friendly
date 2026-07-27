@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "focus-friendly",
+  "owner": {
+    "name": "Focus Friendly contributors",
+    "url": "https://github.com/yappologistic/focus-friendly"
+  },
+  "description": "Focus-friendly skills for reading, research, learning, planning, and project work.",
+  "plugins": [
+    {
+      "name": "focus-friendly",
+      "source": "./plugins/focus-friendly",
+      "description": "Make dense information and complex work easier to understand, navigate, and act on.",
+      "category": "Productivity",
+      "tags": [
+        "accessibility",
+        "adhd",
+        "focus"
+      ]
+    }
+  ]
+}

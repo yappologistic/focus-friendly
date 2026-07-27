@@ -1,10 +1,13 @@
 {
   "name": "focus-friendly",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Make dense information and complex work easier to understand, navigate, and act on.",
   "author": {
-    "name": "Focus Friendly contributors"
+    "name": "Focus Friendly contributors",
+    "url": "https://github.com/yappologistic/focus-friendly"
   },
+  "homepage": "https://github.com/yappologistic/focus-friendly#readme",
+  "repository": "https://github.com/yappologistic/focus-friendly",
   "license": "MIT",
   "keywords": [
     "accessibility",

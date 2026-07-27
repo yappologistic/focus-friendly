@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "focus-friendly",
+  "displayName": "Focus Friendly",
+  "version": "0.2.0",
+  "description": "Make dense information and complex work easier to understand, navigate, and act on.",
+  "author": {
+    "name": "Focus Friendly contributors"
+  },
+  "homepage": "https://github.com/yappologistic/focus-friendly#readme",
+  "repository": "https://github.com/yappologistic/focus-friendly",
+  "license": "MIT",
+  "keywords": [
+    "accessibility",
+    "adhd",
+    "focus",
+    "learning",
+    "productivity",
+    "reading"
+  ]
+}

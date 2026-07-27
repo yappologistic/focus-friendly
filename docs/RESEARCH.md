@@ -1,6 +1,6 @@
 # Research notes
 
-Accessed July 25, 2026.
+Accessed July 27, 2026.
 
 ## What ADHD research changed
 
@@ -45,6 +45,28 @@ Sources:
 - [OpenAI: Build skills](https://developers.openai.com/plugins/build/skills)
 - [OpenAI: Build plugins](https://developers.openai.com/plugins/build/plugins)
 - [OpenAI: Plugins overview](https://developers.openai.com/plugins/)
+
+## What cross-harness research changed
+
+The open Agent Skills specification and Claude Code use the same portable core: a directory named for the skill, a `SKILL.md` file with `name` and `description` frontmatter, and optional `scripts/`, `references/`, and `assets/` directories. Both recommend progressive disclosure and relative links to bundled resources.
+
+Claude Code supports two relevant distribution paths:
+
+1. Standalone skills in `.claude/skills/` for a project or `~/.claude/skills/` for a user.
+2. Plugins with a `.claude-plugin/plugin.json` manifest and skills under `skills/<name>/SKILL.md`, distributed through a `.claude-plugin/marketplace.json` catalog.
+
+The cross-harness Skills CLI can install a direct skill directory from GitHub into Claude Code, Codex, and other supported agents. This is a convenience installer, not part of the Agent Skills file-format specification.
+
+These findings led to one canonical, harness-neutral skill plus thin Codex and Claude Code packaging metadata. Duplicating the skill into vendor-specific folders was rejected because copies would drift. Referencing files outside a plugin was also rejected because Claude Code caches plugins by copying the plugin directory.
+
+Sources:
+
+- [Agent Skills specification](https://agentskills.io/specification)
+- [Claude Code: Extend Claude with skills](https://code.claude.com/docs/en/slash-commands)
+- [Claude Code: Create plugins](https://code.claude.com/docs/en/plugins)
+- [Claude Code: Create and distribute a plugin marketplace](https://code.claude.com/docs/en/plugin-marketplaces)
+- [Claude Code: Discover and install plugins](https://code.claude.com/docs/en/discover-plugins)
+- [Vercel Labs Skills CLI](https://github.com/vercel-labs/skills)
 
 ## Evidence boundary
 

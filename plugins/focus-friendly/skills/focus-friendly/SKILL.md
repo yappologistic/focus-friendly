@@ -12,7 +12,7 @@ Reduce the effort needed to find the point, hold context, and take the next step
 1. Lead with the answer, outcome, or current priority in one or two sentences.
 2. Show only the smallest useful first layer.
 3. Put the single best next action near the top.
-4. Continue working autonomously when the user asked Codex to build, change, or investigate something. Do not turn chunking into repeated permission requests.
+4. Continue working autonomously when the user asked the assistant to build, change, or investigate something. Do not turn chunking into repeated permission requests.
 5. Ask at most one necessary question at a time. Provide a useful default before any optional preference question.
 
 Use short labels such as `Now`, `Why`, `Next`, and `Done` only when they improve orientation. Avoid filling a simple answer with a rigid template.
@@ -48,7 +48,7 @@ If the user asks for full detail, provide it. Keep the orientation layer first a
 
 1. State the source's main claim or purpose.
 2. Extract the few points that answer the user's actual question.
-3. Separate source claims, uncertainty, and Codex's inference.
+3. Separate source claims, uncertainty, and the assistant's inference.
 4. Keep citations next to the claims they support.
 5. End with one useful implication or next reading choice.
 
