@@ -38,7 +38,7 @@ Sources:
 
 Current OpenAI guidance describes skills as reusable workflows with progressive disclosure and plugins as their installable distribution unit. It recommends concise trigger descriptions, imperative steps, and optional references loaded only when needed.
 
-That led to one focused skill, a compact `SKILL.md`, two on-demand references, UI metadata, an official plugin manifest, and a local marketplace for testing.
+That led to one focused skill, a compact `SKILL.md`, on-demand references, UI metadata, an official plugin manifest, and a local marketplace for testing.
 
 Sources:
 
@@ -67,6 +67,25 @@ Sources:
 - [Claude Code: Create and distribute a plugin marketplace](https://code.claude.com/docs/en/plugin-marketplaces)
 - [Claude Code: Discover and install plugins](https://code.claude.com/docs/en/discover-plugins)
 - [Vercel Labs Skills CLI](https://github.com/vercel-labs/skills)
+
+## What evaluation guidance changed
+
+Current Agent Skills guidance warns that overly broad descriptions can trigger incorrectly, conflict with other skills, and degrade agent performance. It recommends evaluating trigger accuracy, isolation, coexistence, instruction following, and output quality with representative positive, negative, and ambiguous cases.
+
+W3C cognitive-accessibility guidance also emphasizes personalization and including people with cognitive and learning disabilities in design and testing. Accessible defaults are not a substitute for user feedback.
+
+These findings led to four changes:
+
+1. Narrow implicit activation and state explicit negative boundaries.
+2. Add should-activate, should-not-activate, and contextual evaluation cases.
+3. Infer presentation preferences from user feedback instead of imposing one template.
+4. Validate packaging, references, version parity, and evaluation coverage continuously.
+
+Sources:
+
+- [Anthropic: Skill authoring best practices](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices)
+- [Anthropic: Evaluating Skills before deployment](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/enterprise)
+- [W3C: Cognitive Accessibility](https://www.w3.org/WAI/cognitive/)
 
 ## Evidence boundary
 

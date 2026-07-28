@@ -1,6 +1,6 @@
 {
   "name": "focus-friendly",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Make dense information and complex work easier to understand, navigate, and act on.",
   "author": {
     "name": "Focus Friendly contributors",
@@ -21,7 +21,7 @@
   "interface": {
     "displayName": "Focus Friendly",
     "shortDescription": "Understand dense information one layer at a time.",
-    "longDescription": "Focus Friendly adapts reading, research, learning, planning, and project work into clear layers with visible context and concrete next steps. It is designed for people who experience attention, working-memory, or reading barriers, while remaining useful to anyone facing information overload.",
+    "longDescription": "Focus Friendly selectively adapts dense reading, research, learning, and project work into clear layers with visible context and useful next steps. It responds to explicit focus needs and complex material without imposing a template on routine tasks.",
     "developerName": "Focus Friendly contributors",
     "category": "Productivity",
     "capabilities": [

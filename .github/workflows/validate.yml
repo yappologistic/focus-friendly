@@ -1,0 +1,31 @@
+name: Validate
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Validate skill, packaging, and evaluation corpus
+        run: python scripts/validate_repo.py
+
+      - name: Verify cross-harness skill discovery
+        run: npx --yes skills@1.5.9 add ./plugins/focus-friendly/skills/focus-friendly --list

@@ -1,6 +1,6 @@
 ---
 name: focus-friendly
-description: Make dense information and complex work easier to understand, navigate, remember, and act on through short layers, clear structure, plain-language explanations, concrete examples, and visible progress. Use for long or difficult text, articles, books, documentation, research, learning, decisions, planning, coding, project work, task initiation, attention recovery, or whenever a user mentions ADHD, overwhelm, cognitive load, trouble reading, trouble focusing, losing their place, or wanting information simplified, chunked, summarized, paced, or made actionable.
+description: Make dense or complex information easier to understand, navigate, remember, and act on through clear layers, concrete examples, and visible progress. Use when the user invokes Focus Friendly; asks to simplify, chunk, pace, map, summarize, or reorient information; mentions ADHD, overwhelm, cognitive load, trouble reading or focusing, task-initiation difficulty, or losing their place; or provides long, structurally complex material that clearly needs an orientation map. Do not invoke for routine coding, planning, research, or short factual answers without one of these signals.
 ---
 
 # Focus Friendly
@@ -11,7 +11,7 @@ Reduce the effort needed to find the point, hold context, and take the next step
 
 1. Lead with the answer, outcome, or current priority in one or two sentences.
 2. Show only the smallest useful first layer.
-3. Put the single best next action near the top.
+3. Put the single best next action near the top when action materially helps. Omit it when the answer is already complete.
 4. Continue working autonomously when the user asked the assistant to build, change, or investigate something. Do not turn chunking into repeated permission requests.
 5. Ask at most one necessary question at a time. Provide a useful default before any optional preference question.
 
@@ -29,6 +29,17 @@ Use short labels such as `Now`, `Why`, `Next`, and `Done` only when they improve
 - Use bold sparingly for scan targets, not whole sentences.
 - Never use visual clutter, decorative emoji chains, fake urgency, or motivational filler.
 - Do not equate accessibility with childish language. Match the user's expertise and requested depth.
+
+## Calibrate without interrogation
+
+Infer presentation preferences from the user's words and corrections. Keep the latest preference consistent within the conversation:
+
+- **Density:** compact, balanced, or detailed
+- **Pacing:** complete response or staged chunks
+- **Structure:** headings, lists, or continuous prose
+- **Guidance:** one action, a small choice set, or no action
+
+Treat direct feedback such as “less structure,” “give me everything,” “slow down,” or “just answer” as an immediate override. Do not present a settings questionnaire or repeatedly confirm preferences. Do not interpret a request for full detail as a request to simplify away substance.
 
 ## Reveal detail in layers
 
@@ -64,15 +75,19 @@ Read [response-patterns.md](references/response-patterns.md) when adapting a lon
 
 ### Build or complete a project
 
-Maintain a compact external state:
+Maintain a compact checkpoint:
 
 - **Goal:** the requested outcome.
 - **Now:** the only active step.
-- **Done:** verified progress.
+- **Verified:** results confirmed by evidence.
+- **Decisions:** choices that must remain stable.
+- **Blocker:** the current obstacle, when one exists.
 - **Next:** the next concrete step.
 - **Parked:** nonessential ideas that should not interrupt the current path.
 
 Break work into independently verifiable slices. Give concise progress updates, preserve user decisions, and resume from the last recorded state after interruptions.
+
+Read [project-work.md](references/project-work.md) for multi-step coding, research, or project work and whenever exact recovery state matters.
 
 ### Compare or decide
 
@@ -99,10 +114,12 @@ Do not scold, diagnose, or add a lecture.
 - Do not diagnose ADHD, interpret symptoms as proof of ADHD, or present this skill as treatment.
 - Respect direct user requests for a different style, including more detail, fewer headings, no summaries, or continuous prose.
 
+When condensing or restructuring source material, silently check that the response preserves negations, exceptions, preconditions, warnings, units, quantities, identifiers, error text, attribution, and meaningful uncertainty. Do not trade correctness for brevity.
+
 Read [evidence-and-boundaries.md](references/evidence-and-boundaries.md) before making claims about ADHD or explaining why a specific adaptation helps. Read [response-patterns.md](references/response-patterns.md) for reusable layouts and control phrases.
 
 ## End with a clean handoff
 
-For completed work, report the result first, then the most important verification and any remaining action. For ongoing reading or learning, end at a natural boundary and offer a small continuation menu such as `continue`, `example`, or `deeper`.
+For completed work, report the result first, then the most important verification and any remaining action. Do not manufacture homework or a next step when none is useful. For ongoing reading or learning, end at a natural boundary and offer a small continuation menu such as `continue`, `example`, or `deeper`.
 
 Never require special commands. Understand ordinary language such as “shorter,” “slow down,” “show me the map,” “what matters?”, “where were we?”, or “one step at a time.”

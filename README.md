@@ -8,12 +8,14 @@ It is designed for people who experience ADHD, attention barriers, working-memor
 
 ## What it does
 
-- Leads with the point and one useful next step.
+- Leads with the point and, when useful, one concrete next step.
 - Reveals detail in layers instead of one large text wall.
 - Turns long sources into a map and manageable chunks.
 - Explains technical ideas with plain language and one concrete example.
-- Keeps project state visible so interruptions are easier to recover from.
+- Learns presentation preferences from ordinary feedback without a setup questionnaire.
+- Keeps verified project state, decisions, blockers, and next actions recoverable.
 - Preserves caveats, citations, and exact technical details.
+- Stays out of routine tasks that do not need focus adaptation.
 
 It does not diagnose or treat ADHD.
 
@@ -75,15 +77,19 @@ You can also say:
 
 - `plugins/focus-friendly/` — one dual-harness plugin package
 - `plugins/focus-friendly/skills/focus-friendly/SKILL.md` — core behavior
+- `plugins/focus-friendly/skills/focus-friendly/references/` — on-demand response, evidence, and recovery guidance
 - `.agents/plugins/marketplace.json` — Codex marketplace
 - `.claude-plugin/marketplace.json` — Claude Code marketplace
+- `evals/cases.json` — positive, negative, and ambiguous behavior cases
+- `scripts/validate_repo.py` — portable repository validation
+- `.github/workflows/validate.yml` — continuous validation
 - `docs/DESIGN.md` — design decisions and boundaries
 - `docs/RESEARCH.md` — source-backed research notes
 - `docs/TESTING.md` — validation and manual test cases
 
 ## Status
 
-This is an early cross-harness release (`0.2.0`).
+This is an early cross-harness release (`0.3.0`).
 
 ## Contributing
 

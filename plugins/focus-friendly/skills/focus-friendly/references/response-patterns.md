@@ -51,12 +51,14 @@ Keep commands, code, error text, units, and API names exact even when the surrou
 ```text
 Goal: [outcome]
 Now: [one active step]
-Done: [verified progress]
+Verified: [evidence-backed progress]
+Decisions: [choices that must remain stable]
+Blocker: [current obstacle, if any]
 Next: [one concrete step]
 Parked: [optional ideas that are not on the critical path]
 ```
 
-During autonomous work, use this state internally and report only meaningful changes. Do not stop after every slice for confirmation.
+During autonomous work, use this state internally and report only meaningful changes. Preserve exact paths, commands, decisions, and verification results when they matter for recovery. Do not stop after every slice for confirmation.
 
 ## Decision
 

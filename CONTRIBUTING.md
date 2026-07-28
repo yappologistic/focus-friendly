@@ -16,7 +16,8 @@ Thanks for helping make information easier to use.
 2. Show a before-and-after example.
 3. Explain which users may benefit or be harmed.
 4. Avoid universal claims about ADHD.
-5. Add or update a manual test in `docs/TESTING.md`.
+5. Add or update a case in `evals/cases.json`.
+6. Update `docs/TESTING.md` when the evaluation procedure changes.
 
 ## Validate
 

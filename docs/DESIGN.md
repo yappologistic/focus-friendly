@@ -8,7 +8,7 @@ Reduce the cognitive work required to find the point, keep context, and take act
 
 ### One useful layer first
 
-The first view contains the answer or current priority, a small amount of supporting information, and one next action. Deeper material remains available.
+The first view contains the answer or current priority, a small amount of supporting information, and one next action when action is useful. Deeper material remains available.
 
 ### Orientation before detail
 
@@ -26,6 +26,22 @@ ADHD is heterogeneous. The skill uses accessible defaults and follows the user's
 
 For build and research tasks, the assistant continues working after concise updates. “One step at a time” changes presentation, not autonomy.
 
+### Precise activation
+
+Focus Friendly activates for explicit requests, expressed focus or cognitive-load barriers, lost-context recovery, or material whose length and structure clearly require a map. Routine coding, planning, research, and short factual questions remain unmodified without one of those signals.
+
+### Calibration without setup
+
+The skill infers density, pacing, structure, and guidance preferences from ordinary requests and corrections. The latest direct preference wins within the conversation. It does not require a settings questionnaire or assume one format works for everyone.
+
+### Recoverable operational state
+
+Multi-step work distinguishes activity from verified results and preserves decisions, blockers, exact operational details, and the next continuation. This reduces repeated work after an interruption without forcing every progress update into a visible template.
+
+### Evaluation before expansion
+
+Behavior changes must be tested against requests that should activate, should not activate, and require contextual judgment. Evaluation covers triggering, coexistence, instruction following, accuracy retention, and output quality.
+
 ## Non-goals
 
 - Diagnosing or treating ADHD
@@ -41,6 +57,9 @@ The project keeps one canonical Agent Skill inside a dual-harness plugin package
 ```text
 ├── .agents/plugins/marketplace.json
 ├── .claude-plugin/marketplace.json
+├── .github/workflows/validate.yml
+├── evals/cases.json
+├── scripts/validate_repo.py
 └── plugins/focus-friendly/
     ├── .codex-plugin/plugin.json
     ├── .claude-plugin/plugin.json
@@ -48,6 +67,9 @@ The project keeps one canonical Agent Skill inside a dual-harness plugin package
         ├── SKILL.md
         ├── agents/openai.yaml
         └── references/
+            ├── evidence-and-boundaries.md
+            ├── project-work.md
+            └── response-patterns.md
 ```
 
 `SKILL.md` and its references are harness-neutral. `agents/openai.yaml` is optional Codex interface metadata; other harnesses can ignore it. Codex and Claude Code each read their own plugin and marketplace manifests while sharing the same skill files.

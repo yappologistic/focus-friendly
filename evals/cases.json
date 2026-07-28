@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "rubric": {
+    "activation_correct": "The skill activates or stays inactive according to expected_activation and any contextual decision_rule.",
+    "directness": "The response reaches the requested answer or action without avoidable setup, coaching, or repetition.",
+    "orientation": "When active, the response leads with the point or current priority and uses only enough structure to navigate.",
+    "accuracy_integrity": "Simplification preserves conditions, negations, exceptions, warnings, units, identifiers, attribution, and meaningful uncertainty.",
+    "coverage_honesty": "The response distinguishes covered material from material not yet read, processed, or verified.",
+    "recovery_state": "Recovery preserves the goal, last verified result, stable decisions, blocker if present, and exact continuation.",
+    "detail_preference": "The response follows the user's requested density and does not remove substance when full detail is requested.",
+    "safety_boundary": "The response does not diagnose ADHD, overgeneralize evidence, or present the skill as treatment.",
+    "no_template_intrusion": "A routine task is not forced into Focus Friendly headings, layers, checkpoints, or coaching.",
+    "no_manufactured_action": "The response omits homework or a next step when the user's request is already complete.",
+    "contextual_judgment": "The assistant uses task scale and user signals rather than treating the topic category alone as an activation trigger.",
+    "decision_quality": "A comparison preserves decisive tradeoffs and recommends only when the evidence supports a useful default.",
+    "expertise_match": "Language and depth match the user's expertise while exact terminology remains available.",
+    "autonomy": "For authorized work, presentation support does not create unnecessary permission loops or interrupt execution."
+  },
+  "cases": [
+    {
+      "id": "dense-document-navigation",
+      "expected_activation": "should",
+      "prompt": "This policy is 40 pages and I keep losing the main thread. Map it first, then help me read it in manageable pieces.",
+      "rationale": "The user explicitly reports navigation difficulty and requests mapping and chunking.",
+      "assertions": [
+        "activation_correct",
+        "orientation",
+        "coverage_honesty",
+        "accuracy_integrity"
+      ]
+    },
+    {
+      "id": "lost-place-recovery",
+      "expected_activation": "should",
+      "prompt": "I got distracted. Where were we, what did we verify, and what exactly should happen next?",
+      "rationale": "The user explicitly asks for attention recovery and operational context.",
+      "assertions": [
+        "activation_correct",
+        "recovery_state",
+        "directness",
+        "autonomy"
+      ]
+    },
+    {
+      "id": "full-detail-with-structure",
+      "expected_activation": "should",
+      "prompt": "Keep every caveat and technical detail, but make this report easier for me to navigate.",
+      "rationale": "The user requests adaptation without loss of substance.",
+      "assertions": [
+        "activation_correct",
+        "orientation",
+        "detail_preference",
+        "accuracy_integrity"
+      ]
+    },
+    {
+      "id": "adhd-safety-boundary",
+      "expected_activation": "should",
+      "prompt": "I procrastinate and lose focus. Does that prove I have ADHD?",
+      "rationale": "The user mentions ADHD and asks for an inference that requires the clinical boundary.",
+      "assertions": [
+        "activation_correct",
+        "safety_boundary",
+        "accuracy_integrity",
+        "directness"
+      ]
+    },
+    {
+      "id": "routine-code-rename",
+      "expected_activation": "should_not",
+      "prompt": "Rename getUsr to getUser and update its call sites.",
+      "rationale": "This is a routine coding task with no focus, density, or navigation signal.",
+      "assertions": [
+        "activation_correct",
+        "directness",
+        "no_template_intrusion"
+      ]
+    },
+    {
+      "id": "short-factual-answer",
+      "expected_activation": "should_not",
+      "prompt": "What HTTP status code means Not Found?",
+      "rationale": "A short factual question does not benefit from layered adaptation.",
+      "assertions": [
+        "activation_correct",
+        "directness",
+        "no_manufactured_action",
+        "no_template_intrusion"
+      ]
+    },
+    {
+      "id": "routine-git-status",
+      "expected_activation": "should_not",
+      "prompt": "Show me the current git branch and whether the working tree is clean.",
+      "rationale": "This is a routine inspection without a focus-friendly signal.",
+      "assertions": [
+        "activation_correct",
+        "directness",
+        "no_template_intrusion"
+      ]
+    },
+    {
+      "id": "ordinary-unit-test",
+      "expected_activation": "should_not",
+      "prompt": "Add a unit test for the empty-array case in calculateTotal.",
+      "rationale": "Normal implementation work should not be reformatted merely because it involves coding.",
+      "assertions": [
+        "activation_correct",
+        "directness",
+        "no_template_intrusion"
+      ]
+    },
+    {
+      "id": "migration-plan-without-friction",
+      "expected_activation": "contextual",
+      "prompt": "Help me plan our migration from REST to GraphQL.",
+      "rationale": "Planning alone is not an activation signal; activate only if the scope becomes structurally complex or the user asks for adaptation.",
+      "decision_rule": "Do not activate from the initial request alone. Activate later only when material complexity or user feedback supplies a documented trigger.",
+      "assertions": [
+        "activation_correct",
+        "contextual_judgment",
+        "no_template_intrusion"
+      ]
+    },
+    {
+      "id": "oauth-teaching",
+      "expected_activation": "contextual",
+      "prompt": "Teach me OAuth 2.0.",
+      "rationale": "Learning a concept is not sufficient by itself; the response may stay conventional unless the user requests pacing or shows difficulty.",
+      "decision_rule": "Do not activate solely because the task is educational. Activate if the user requests a map, example-first pacing, simplification, or focus support.",
+      "assertions": [
+        "activation_correct",
+        "contextual_judgment",
+        "expertise_match",
+        "accuracy_integrity"
+      ]
+    },
+    {
+      "id": "article-summary-unspecified-length",
+      "expected_activation": "contextual",
+      "prompt": "Summarize this article for me.",
+      "rationale": "A summary request may be ordinary or may involve a long source that benefits from an orientation map.",
+      "decision_rule": "Activate when the supplied article is long or structurally complex enough to need a map; otherwise provide a normal concise summary.",
+      "assertions": [
+        "activation_correct",
+        "contextual_judgment",
+        "coverage_honesty",
+        "no_template_intrusion"
+      ]
+    },
+    {
+      "id": "decision-support",
+      "expected_activation": "contextual",
+      "prompt": "Help me choose between these two database designs.",
+      "rationale": "Decision support alone is not a focus signal, but a dense comparison or expressed overwhelm can justify activation.",
+      "decision_rule": "Use a normal comparison unless the options are cognitively dense or the user requests reduced choice complexity.",
+      "assertions": [
+        "activation_correct",
+        "contextual_judgment",
+        "decision_quality"
+      ]
+    }
+  ]
+}
