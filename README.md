@@ -90,7 +90,7 @@ You can also say:
 
 ## Status
 
-This is an early cross-harness release (`0.3.0`).
+This is an early cross-harness release (`0.4.0`).
 
 ## Contributing
 
