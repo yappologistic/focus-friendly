@@ -8,7 +8,7 @@ Reduce the cognitive work required to find the point, keep context, and take act
 
 ### One useful layer first
 
-The first view contains the answer or current priority, a small amount of supporting information, and one next action when action is useful. Deeper material remains available.
+The first view contains the answer or current priority, a small amount of supporting information, and one next action when action is useful. Layering changes presentation, not requested completeness: deeper material remains in the same response when the user requests it and it fits accurately.
 
 ### Orientation before detail
 

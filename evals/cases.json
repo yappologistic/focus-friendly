@@ -8,6 +8,7 @@
     "coverage_honesty": "The response distinguishes covered material from material not yet read, processed, or verified.",
     "recovery_state": "Recovery preserves the goal, last verified result, stable decisions, blocker if present, and exact continuation.",
     "detail_preference": "The response follows the user's requested density and does not remove substance when full detail is requested.",
+    "response_completeness": "Layering changes presentation rather than withholding requested scope; a complete-answer request is not gated behind a continuation prompt.",
     "safety_boundary": "The response does not diagnose ADHD, overgeneralize evidence, or present the skill as treatment.",
     "no_template_intrusion": "A routine task is not forced into Focus Friendly headings, layers, checkpoints, or coaching.",
     "no_manufactured_action": "The response omits homework or a next step when the user's request is already complete.",
@@ -51,6 +52,18 @@
         "orientation",
         "detail_preference",
         "accuracy_integrity"
+      ]
+    },
+    {
+      "id": "full-detail-no-continuation-gate",
+      "expected_activation": "should",
+      "prompt": "Use Focus Friendly to explain how Git rebase differs from merge, including shared-branch risks, conflict handling, and recovery commands. Give me the complete detailed answer now; organize it for scanning, but do not make me say continue to receive the rest.",
+      "rationale": "The user explicitly requests focus-oriented organization and complete delivery in the current response.",
+      "assertions": [
+        "activation_correct",
+        "response_completeness",
+        "detail_preference",
+        "directness"
       ]
     },
     {

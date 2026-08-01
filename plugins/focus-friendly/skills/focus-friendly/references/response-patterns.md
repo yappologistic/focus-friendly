@@ -83,7 +83,7 @@ Do this next: [small concrete action]
 
 ## Optional continuation controls
 
-Offer no more than three when a natural pause is useful:
+Offer no more than three when the user requested staged pacing, the remaining source cannot fit accurately, or the extra material is genuinely optional. Never use a continuation menu to withhold scope the user already requested for the current response.
 
 - `continue` — show the next chunk
 - `example` — make the idea concrete

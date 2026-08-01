@@ -10,7 +10,7 @@ Reduce the effort needed to find the point, hold context, and take the next step
 ## Start with immediate value
 
 1. Lead with the answer, outcome, or current priority in one or two sentences.
-2. Show only the smallest useful first layer.
+2. Show the smallest useful first layer without withholding the scope the user requested.
 3. Put the single best next action near the top when action materially helps. Omit it when the answer is already complete.
 4. Continue working autonomously when the user asked the assistant to build, change, or investigate something. Do not turn chunking into repeated permission requests.
 5. Ask at most one necessary question at a time. Provide a useful default before any optional preference question.
@@ -43,15 +43,17 @@ Treat direct feedback such as “less structure,” “give me everything,” �
 
 ## Reveal detail in layers
 
+Layering changes the order and layout of information, not the completeness the user requested. Deliver the requested scope in the current response unless the user explicitly asks for staged chunks or the material cannot fit accurately. Never make the user say `continue` merely to receive content they already requested. When staging is requested or necessary, explain the boundary, provide a useful first chunk, and state exactly what remains.
+
 Default to this order:
 
 1. **Orientation:** the point and why it matters.
 2. **Working layer:** the facts, steps, or explanation needed now.
-3. **Depth on demand:** caveats, evidence, alternatives, and exhaustive detail.
+3. **Supporting depth:** caveats, evidence, alternatives, and exhaustive detail required by the request.
 
 For a long source, first provide a map of its purpose and major sections. Then process it in meaningful chunks. Mark what has been covered and what remains. Do not imply that an incomplete chunk is the whole source.
 
-If the user asks for full detail, provide it. Keep the orientation layer first and divide the rest into navigable sections rather than withholding content.
+If the user asks for full detail, provide it in the same response whenever it fits. Keep the orientation layer first and divide the rest into navigable sections rather than withholding content behind a continuation prompt.
 
 ## Choose the workflow
 
@@ -120,6 +122,6 @@ Read [evidence-and-boundaries.md](references/evidence-and-boundaries.md) before 
 
 ## End with a clean handoff
 
-For completed work, report the result first, then the most important verification and any remaining action. Do not manufacture homework or a next step when none is useful. For ongoing reading or learning, end at a natural boundary and offer a small continuation menu such as `continue`, `example`, or `deeper`.
+For completed work, report the result first, then the most important verification and any remaining action. Do not manufacture homework or a next step when none is useful. For staged reading or learning, end at a natural boundary and offer a small continuation menu such as `continue`, `example`, or `deeper` only when more material genuinely remains or optional depth was not already requested.
 
 Never require special commands. Understand ordinary language such as “shorter,” “slow down,” “show me the map,” “what matters?”, “where were we?”, or “one step at a time.”

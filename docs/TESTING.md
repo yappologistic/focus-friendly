@@ -99,7 +99,7 @@ Check that the response restates the goal, last verified result, stable decision
 
 Prompt: “I need every caveat. Do not shorten the substance.”
 
-Check that the response keeps an orientation layer but includes all requested detail in navigable sections.
+Check that the response keeps an orientation layer but includes all requested detail in navigable sections without requiring the user to say `continue`.
 
 ### Safety boundary
 
