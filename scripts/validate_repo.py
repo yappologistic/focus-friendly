@@ -141,6 +141,7 @@ def validate_evals() -> None:
 
     ids: set[str] = set()
     counts: Counter[str] = Counter()
+    fixture_cases = 0
     for index, case in enumerate(cases):
         prefix = f"evals/cases.json case {index}"
         if not isinstance(case, dict):
@@ -169,8 +170,28 @@ def validate_evals() -> None:
             decision_rule = case.get("decision_rule", "")
             check(isinstance(decision_rule, str) and bool(decision_rule.strip()), f"{prefix}: contextual cases require a decision_rule")
 
+        fixture = case.get("fixture")
+        if fixture is not None:
+            fixture_cases += 1
+            check(isinstance(fixture, str) and bool(fixture.strip()), f"{prefix}: fixture must be a non-empty path")
+            if isinstance(fixture, str) and fixture.strip():
+                fixture_path = (ROOT / fixture).resolve()
+                evals_root = (ROOT / "evals").resolve()
+                check(fixture_path.is_relative_to(evals_root), f"{prefix}: fixture must stay inside evals/")
+                check(fixture_path.is_file(), f"{prefix}: fixture does not exist: {fixture}")
+
+            required_facts = case.get("required_facts", [])
+            forbidden_claims = case.get("forbidden_claims", [])
+            check(isinstance(required_facts, list) and len(required_facts) >= 5, f"{prefix}: fixture case needs at least five required_facts")
+            check(isinstance(forbidden_claims, list) and len(forbidden_claims) >= 1, f"{prefix}: fixture case needs at least one forbidden_claim")
+            if isinstance(required_facts, list):
+                check(all(isinstance(fact, str) and fact.strip() for fact in required_facts), f"{prefix}: required_facts must be non-empty strings")
+            if isinstance(forbidden_claims, list):
+                check(all(isinstance(claim, str) and claim.strip() for claim in forbidden_claims), f"{prefix}: forbidden_claims must be non-empty strings")
+
     for activation in ALLOWED_ACTIVATION:
         check(counts[activation] >= 3, f"Evaluation corpus needs at least three {activation} cases")
+    check(fixture_cases >= 1, "Evaluation corpus needs at least one source-backed accuracy fixture")
 
 
 def validate_release_docs() -> None:

@@ -47,6 +47,8 @@ GitHub Actions runs the portable validator and cross-harness discovery check on 
 
 `evals/cases.json` contains requests that should activate Focus Friendly, should not activate it, and require contextual judgment.
 
+When a case has a `fixture`, supply that file's complete contents with the prompt. Compare the response against every `required_facts` and `forbidden_claims` entry. Any missing required fact, introduced forbidden claim, changed unit, weakened prohibition, or altered identifier fails `accuracy_integrity`.
+
 For a release:
 
 1. Run every case with the skill installed.
@@ -70,6 +72,12 @@ Check that the response gives the main point, a map, a first chunk, and an hones
 Prompt: “Teach me OAuth from this documentation. Keep the technical terms.”
 
 Check that the response gives a plain-language definition, one example, and preserves exact terminology and security caveats.
+
+### Adversarial accuracy fixture
+
+Run `accuracy-adversarial-migration-brief` with `evals/fixtures/orion-edge-migration.md`.
+
+Check every `required_facts` entry and confirm that no `forbidden_claims` entry appears. Pay particular attention to `MiB` versus `MB`, the `eu-central-2` exclusion, the stored-data encryption negation, the exact error text, the `--force` prohibition, attribution, and the preliminary-result caveat.
 
 ### Active project
 

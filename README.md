@@ -81,6 +81,7 @@ You can also say:
 - `.agents/plugins/marketplace.json` — Codex marketplace
 - `.claude-plugin/marketplace.json` — Claude Code marketplace
 - `evals/cases.json` — positive, negative, and ambiguous behavior cases
+- `evals/fixtures/` — difficult source material for accuracy-retention cases
 - `scripts/validate_repo.py` — portable repository validation
 - `.github/workflows/validate.yml` — continuous validation
 - `docs/DESIGN.md` — design decisions and boundaries

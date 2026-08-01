@@ -40,7 +40,7 @@ Multi-step work distinguishes activity from verified results and preserves decis
 
 ### Evaluation before expansion
 
-Behavior changes must be tested against requests that should activate, should not activate, and require contextual judgment. Evaluation covers triggering, coexistence, instruction following, accuracy retention, and output quality.
+Behavior changes must be tested against requests that should activate, should not activate, and require contextual judgment. Evaluation covers triggering, coexistence, instruction following, accuracy retention, and output quality. Source-backed fixtures make accuracy checks concrete by enumerating facts that must survive adaptation and claims that must not be introduced.
 
 ## Non-goals
 

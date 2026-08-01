@@ -31,6 +31,39 @@
       ]
     },
     {
+      "id": "accuracy-adversarial-migration-brief",
+      "expected_activation": "should",
+      "prompt": "Use Focus Friendly to create a complete, easy-to-scan migration brief from the supplied fixture. Preserve every precondition, prohibition, exception, warning, unit, quantity, identifier, exact error message, attribution, and uncertainty. Do not add conclusions that the fixture does not support.",
+      "fixture": "evals/fixtures/orion-edge-migration.md",
+      "rationale": "The source deliberately combines details that are commonly lost or distorted during simplification.",
+      "required_facts": [
+        "Requires Orion Agent 4.1.7 or later and transport.mode=quic.",
+        "Does not apply in eu-central-2 even when both preconditions are met.",
+        "Dry run ORION-E417 is required before production scheduling.",
+        "The window is 2026-08-12 03:00 UTC through 2026-08-19 18:30 UTC.",
+        "Reserve 250 MiB per node, explicitly not 250 MB.",
+        "Packet loss must remain below 0.75% for 30 s continuously.",
+        "regulated=true clusters require attached approval ticket SEC-1842 for automatic migration.",
+        "Retain ledger-v1 for at least 72 h because rollback depends on it.",
+        "The release adds encryption in transit, not encryption for stored data.",
+        "The exact error is E_QUIC_104: peer certificate epoch mismatch, and --force must not bypass it.",
+        "The Orion performance team reported a 12% median reduction across 18 test clusters.",
+        "The result is preliminary, excluded eu-central-2, included only two regulated=true clusters, and does not predict improvement for every eligible cluster."
+      ],
+      "forbidden_claims": [
+        "The migration applies to eu-central-2.",
+        "Orion Edge 4.2 adds encryption for stored data.",
+        "Every eligible cluster will improve by 12%.",
+        "The certificate check may be bypassed with --force."
+      ],
+      "assertions": [
+        "activation_correct",
+        "accuracy_integrity",
+        "coverage_honesty",
+        "response_completeness"
+      ]
+    },
+    {
       "id": "lost-place-recovery",
       "expected_activation": "should",
       "prompt": "I got distracted. Where were we, what did we verify, and what exactly should happen next?",
