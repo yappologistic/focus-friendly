@@ -69,7 +69,10 @@ def validate_skill() -> None:
     check(bool(SKILL_NAME.fullmatch(name)), "Skill name must use lowercase letters, digits, and single hyphens")
     check(name == SKILL_DIR.name, "Skill name must match its parent directory")
     check(1 <= len(description) <= 1024, "Skill description must contain 1–1024 characters")
-    check("Do not invoke for routine coding" in description, "Skill description must retain its negative trigger boundary")
+    check(
+        "Do not invoke merely" in description and "routine coding" in description,
+        "Skill description must retain its negative trigger boundary",
+    )
     check("Codex" not in text, "Portable SKILL.md must not contain harness-specific Codex wording")
     check(len(text.splitlines()) < 500, "SKILL.md must remain under 500 lines")
 

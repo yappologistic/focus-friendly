@@ -111,6 +111,17 @@
       ]
     },
     {
+      "id": "adhd-topic-routine-code",
+      "expected_activation": "should_not",
+      "prompt": "I am building an ADHD awareness website. Rename getUsr to getUser and update its call sites.",
+      "rationale": "Mentioning ADHD does not create a focus or navigation need for an otherwise routine coding task.",
+      "assertions": [
+        "activation_correct",
+        "directness",
+        "no_template_intrusion"
+      ]
+    },
+    {
       "id": "migration-plan-without-friction",
       "expected_activation": "contextual",
       "prompt": "Help me plan our migration from REST to GraphQL.",
@@ -136,15 +147,13 @@
       ]
     },
     {
-      "id": "article-summary-unspecified-length",
-      "expected_activation": "contextual",
-      "prompt": "Summarize this article for me.",
-      "rationale": "A summary request may be ordinary or may involve a long source that benefits from an orientation map.",
-      "decision_rule": "Activate when the supplied article is long or structurally complex enough to need a map; otherwise provide a normal concise summary.",
+      "id": "short-status-summary",
+      "expected_activation": "should_not",
+      "prompt": "Summarize this status update: The build passed. Documentation shipped. The launch remains scheduled for Monday.",
+      "rationale": "A short, straightforward summary does not need focus-oriented adaptation merely because the user asks to summarize it.",
       "assertions": [
         "activation_correct",
-        "contextual_judgment",
-        "coverage_honesty",
+        "directness",
         "no_template_intrusion"
       ]
     },

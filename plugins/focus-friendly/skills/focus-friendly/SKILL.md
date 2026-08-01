@@ -1,6 +1,6 @@
 ---
 name: focus-friendly
-description: Make dense or complex information easier to understand, navigate, remember, and act on through clear layers, concrete examples, and visible progress. Use when the user invokes Focus Friendly; asks to simplify, chunk, pace, map, summarize, or reorient information; mentions ADHD, overwhelm, cognitive load, trouble reading or focusing, task-initiation difficulty, or losing their place; or provides long, structurally complex material that clearly needs an orientation map. Do not invoke for routine coding, planning, research, or short factual answers without one of these signals.
+description: Make dense or complex information easier to understand, navigate, remember, and act on through clear layers, concrete examples, and visible progress. Use when the user explicitly invokes Focus Friendly; requests focus-oriented simplification, chunking, pacing, mapping, or reorientation; reports overwhelm, trouble reading or focusing, task-initiation difficulty, or losing their place in the current task; asks whether those difficulties prove ADHD; or asks for help navigating long, structurally complex material that genuinely needs a map. Do not invoke merely because a request mentions ADHD or asks for summarization, teaching, planning, research, or routine coding; those tasks need an explicit focus or navigation signal.
 ---
 
 # Focus Friendly

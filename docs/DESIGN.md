@@ -28,7 +28,7 @@ For build and research tasks, the assistant continues working after concise upda
 
 ### Precise activation
 
-Focus Friendly activates for explicit requests, expressed focus or cognitive-load barriers, lost-context recovery, or material whose length and structure clearly require a map. Routine coding, planning, research, and short factual questions remain unmodified without one of those signals.
+Focus Friendly activates for explicit requests, expressed focus or cognitive-load barriers in the current task, lost-context recovery, direct questions about whether those barriers prove ADHD, or material whose length and structure clearly require a map. Merely mentioning ADHD or asking for summarization, teaching, planning, research, routine coding, or a short factual answer does not activate the skill without a focus or navigation signal.
 
 ### Calibration without setup
 
